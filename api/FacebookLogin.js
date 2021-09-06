@@ -20,9 +20,10 @@ export const facebookLogin = async () => {
         `https://graph.facebook.com/me?access_token=${token}`
       );
       const resData = await response.json();
+      console.log('eeee',resData)
 
       const profileData = await fetch(
-        `https://graph.facebook.com/${resData.id}?fields=picture&access_token=${token}`
+        `https://graph.facebook.com/${resData.id}?fields=picture,name,email&access_token=${token}`
       );
       const resProfileData = await profileData.json();
       console.log("user Data ->", resProfileData);
@@ -34,7 +35,7 @@ export const facebookLogin = async () => {
   }
 };
 
-//                                    I dont know what is this helping with logout
+//                                    I dont know hpo is this helping with logout
 // const logout = async() => {
 //   console.log('hmm?')
 //   var lParams= `access_token=${myToken};`

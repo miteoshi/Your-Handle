@@ -6,11 +6,12 @@ const { width, height } = Dimensions.get("window");
 export const SignInButtonsStyles = StyleSheet.create({
   buttons: {
     backgroundColor: colors.headingColor,
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: 5,
+    padding: 5,
     alignItems: "center",
     justifyContent: "center",
-    width: width * 0.2,
+    width: width * 0.15,
+    marginHorizontal:25
   },
 });
 

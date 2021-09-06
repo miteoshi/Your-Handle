@@ -18,7 +18,7 @@ const SignInButtons = (props) => {
     >
       <AntDesign
         name={props.name}
-        size={30}
+        size={35}
         color={props.name === "google" ? "#262626" : "#4267B2"}
       />
     </TouchableOpacity>
