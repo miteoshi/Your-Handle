@@ -1,5 +1,5 @@
-import React from 'react'
-import {View,Text, Dimensions} from 'react-native';
+import React, { useRef } from 'react'
+import {View,Text,Dimensions ,Image} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import DashHeader from '../../components/DashBoard/DashHeader';
 import Profile from '../../components/DashBoard/Profile';
@@ -8,13 +8,20 @@ import LoginScreenStyles from './LoginScreenStyles';
 import { LinearGradient } from "expo-linear-gradient";
 import LottieView from "lottie-react-native";
 import DashBoardScreenStyles from './DashBoardScreenStyles';
+import { Modalize } from 'react-native-modalize';
+import DevCredits from '../../components/DashBoard/DevCredits';
 
 const {width,height} = Dimensions.get('window')
 
 const DashBoardScreen = (props) => {
 
+    const modalizeRef = useRef(null);
+
+    const onOpen = async () => {
+      modalizeRef.current?.open();
+    };
+
   const onPress = () => {
-    console.log('yo')
      props.navigation.navigate("Login");
   }
 
@@ -34,10 +41,12 @@ const DashBoardScreen = (props) => {
           speed={1}
         />
 
-        <DashHeader onPress = {onPress}/>
-        <View style={{ justifyContent: "center" }}>
-          <Profile data={userDetails} />
-        </View>
+        <DashHeader onPress={onPress} onModal={onOpen} />
+
+        <Profile data={userDetails} />
+        <Modalize modalHeight={height * 0.15} ref={modalizeRef}>
+          <DevCredits/>
+        </Modalize>
       </SafeAreaView>
     );
 }

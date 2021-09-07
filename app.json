@@ -4,11 +4,11 @@
     "slug": "YourHandle",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/handle.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#302c54"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,14 +17,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "1.0.0",
+      "bundleIdentifier": "com.piyush9969.YourHandle"
     },
-    "android": {
+    "android": {  
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#302c54"
       },
-      "package": "com.piyush9969.YourHandle"
+      "package": "com.piyush9969.YourHandle",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

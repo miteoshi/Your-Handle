@@ -5328,6 +5328,11 @@ react-native-loading-dots@^1.2.0:
   resolved "https://registry.yarnpkg.com/react-native-loading-dots/-/react-native-loading-dots-1.2.0.tgz#15459bd6bd0e2435fd773a59378d71a02d10db51"
   integrity sha512-N7tRnm955UeHycuAzmZ+QKlOndpEcmw6ogDZhREj17/W4qa/5jrLxV1yK+PRBvJ0rU3U+FgkfPIVzkHgsyEwuQ==
 
+react-native-modalize@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/react-native-modalize/-/react-native-modalize-2.0.8.tgz#5dcb2c56d82e3dbd271582f832e7e02ae4cbb503"
+  integrity sha512-OKdpFVExEe4YM2uFHL/aStS9p0JaC6gBupjaW1QVHkGq22T2ASYwkhDvTnMS8BLOLWPx2fC3xEBzOcn2rh7EYw==
+
 react-native-safe-area-context@3.2.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.2.0.tgz"

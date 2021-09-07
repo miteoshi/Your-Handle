@@ -12,7 +12,8 @@ export const ProfilesStyles = StyleSheet.create({
     backgroundColor: "#141414",
     borderWidth: 0.1,
     borderColor: "#00c496",
-    marginTop:height*0.36
+    marginTop:height*0,
+    opacity:1
   },
   imageContainer: {
     borderWidth: 3,
