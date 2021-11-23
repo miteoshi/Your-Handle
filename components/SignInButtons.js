@@ -11,8 +11,9 @@ const SignInButtons = (props) => {
     <TouchableOpacity
       style={SignInButtonsStyles.buttons}
       onPress={()=>{        props.name === "google"
-        ? props.onPress("google")
-        : props.onPress("facebook");}
+        ? props.onPress("google"):
+        props.onPress("phone")?
+        props.onPress("facebook"):null}
 
       }
     >

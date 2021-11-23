@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { Dimensions } from "react-native";
 import LoadingDots from "react-native-loading-dots";
+import RNOtpVerify from 'react-native-otp-verify'
 
 import firebase from "firebase";
 
@@ -62,6 +63,8 @@ const LoginScreen = (props) => {
   const onPress = (type) => {
     if (type === "google") {
       googleAsyncLogin();
+    }else if(type === 'phone'){
+      console.log('otp')
     } else {
       facebookAsyncLogin();
     }
@@ -94,7 +97,7 @@ const LoginScreen = (props) => {
         <Header />
         <View style={LoginScreenStyles.secondryHeaderContainer}>
           {isLoading ? (
-            <Text style={LoginScreenStyles.secondryHeader}>Sign In</Text>
+            <Text style={LoginScreenStyles.secondryHeader}>Sign In via</Text>
           ) : (
             // <View
             //   style={{
@@ -108,7 +111,7 @@ const LoginScreen = (props) => {
             //     colors={["#b084ba", "#9870a1", "#865991", "#784882"]}
             //   />
             // </View>
-            <Text style={LoginScreenStyles.secondryHeader}>Sign in</Text>
+            <Text style={LoginScreenStyles.secondryHeader}>Sign in via</Text>
           )}
         </View>
         <View style={LoginScreenStyles.line}></View>
@@ -116,6 +119,10 @@ const LoginScreen = (props) => {
         <View style={LoginScreenStyles.buttonContainer}>
           <SignInButtons name={"google"} onPress={onPress} />
           <SignInButtons name={"facebook-square"} onPress={onPress} />
+          <SignInButtons name={"phone"} onPress={onPress} />
+        </View>
+        <View>
+          <View style={{ backgroundColor: "red" }}></View>
         </View>
       </LinearGradient>
     </View>
